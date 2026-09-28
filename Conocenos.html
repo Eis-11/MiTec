@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conócenos | TecNM Campus Zacatecas Norte</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        /* =========================
+           ENCABEZADO
+        ========================= */
+
+        header {
+            background-color: #003b5c;
+            color: white;
+            padding: 20px 60px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 30px;
+        }
+
+        .logo p {
+            margin-top: 5px;
+            font-size: 15px;
+        }
+
+        /* =========================
+           MENÚ
+        ========================= */
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 18px;
+            display: block;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #005b85;
+        }
+
+        /* =========================
+           PORTADA
+        ========================= */
+
+        .portada {
+            background: linear-gradient(
+                rgba(0, 59, 92, 0.90),
+                rgba(0, 59, 92, 0.90)
+            );
+
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .portada h2 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .portada p {
+            font-size: 20px;
+        }
+
+        /* =========================
+           CONTENEDOR
+        ========================= */
+
+        .contenedor {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .titulo {
+            text-align: center;
+            color: #003b5c;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        /* =========================
+           INSTITUCIÓN
+        ========================= */
+
+        .institucion {
+            background-color: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+            margin-bottom: 40px;
+        }
+
+        .institucion h3 {
+            color: #003b5c;
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+
+        .institucion p {
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* =========================
+           HISTORIA
+        ========================= */
+
+        .historia {
+            background-color: #003b5c;
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .historia h3 {
+            color: #f5b400;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .historia p {
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* =========================
+           FILOSOFÍA
+        ========================= */
+
+        .filosofia {
+            margin-bottom: 40px;
+        }
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .tarjeta {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+
+            box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+
+            border-top: 5px solid #003b5c;
+        }
+
+        .tarjeta h3 {
+            color: #003b5c;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .tarjeta p {
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        /* =========================
+           VALORES
+        ========================= */
+
+        .valores {
+            margin-top: 30px;
+        }
+
+        .lista-valores {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .valor {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+
+            text-align: center;
+
+            box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+        }
+
+        .valor h4 {
+            color: #003b5c;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .valor p {
+            line-height: 1.5;
+        }
+
+        /* =========================
+           DIRECTORIO
+        ========================= */
+
+        .directorio {
+            margin-top: 50px;
+        }
+
+        .tabla-contenedor {
+            overflow-x: auto;
+            background-color: white;
+            border-radius: 10px;
+
+            box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #003b5c;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #eef5f8;
+        }
+
+        /* =========================
+           BOTÓN REGRESAR
+        ========================= */
+
+        .regresar {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .boton {
+            display: inline-block;
+
+            background-color: #003b5c;
+            color: white;
+
+            text-decoration: none;
+
+            padding: 13px 25px;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            background-color: #005b85;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #003b5c;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .tarjetas {
+                grid-template-columns: 1fr;
+            }
+
+            .lista-valores {
+                grid-template-columns: 1fr;
+            }
+
+            .portada h2 {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <h1>TecNM</h1>
+
+            <p>
+                Campus Zacatecas Norte
+            </p>
+
+        </div>
+
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="conocenos.html">
+                        Conócenos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Oferta Educativa
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Servicios
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         PORTADA
+    ========================= -->
+
+    <section class="portada">
+
+        <h2>
+            Conócenos
+        </h2>
+
+        <p>
+            Instituto Tecnológico Superior Zacatecas Norte
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         CONTENIDO
+    ========================= -->
+
+    <main class="contenedor">
+
+
+        <!-- INSTITUCIÓN -->
+
+        <section class="institucion">
+
+            <h3>
+                Nuestra Institución
+            </h3>
+
+            <p>
+                El Instituto Tecnológico Superior Zacatecas Norte,
+                actualmente identificado como TecNM Campus Zacatecas Norte,
+                es una institución de educación superior tecnológica
+                ubicada en Río Grande, Zacatecas.
+            </p>
+
+            <br>
+
+            <p>
+                El instituto tiene como propósito contribuir a la formación
+                de profesionistas y al desarrollo educativo y tecnológico
+                de la región norte del estado de Zacatecas.
+            </p>
+
+        </section>
+
+
+        <!-- HISTORIA -->
+
+        <section class="historia">
+
+            <h3>
+                Historia
+            </h3>
+
+            <p>
+                El Instituto Tecnológico Superior Zacatecas Norte
+                fue creado mediante Decreto del Ejecutivo del Estado
+                el 20 de noviembre de 1990.
+            </p>
+
+            <br>
+
+            <p>
+                Sus actividades comenzaron el 2 de septiembre de 1991,
+                ofreciendo educación superior para la zona norte del
+                estado de Zacatecas.
+            </p>
+
+            <br>
+
+            <p>
+                Desde entonces, la institución ha desarrollado su
+                infraestructura, ampliado su oferta educativa y trabajado
+                junto con estudiantes, docentes, personal administrativo
+                y directivo para contribuir al desarrollo de la región.
+            </p>
+
+        </section>
+
+
+        <!-- FILOSOFÍA -->
+
+        <section class="filosofia">
+
+            <h2 class="titulo">
+                Filosofía Institucional
+            </h2>
+
+
+            <div class="tarjetas">
+
+
+                <!-- MISIÓN -->
+
+                <div class="tarjeta">
+
+                    <h3>
+                        Misión
+                    </h3>
+
+                    <p>
+                        Ofrecer educación superior tecnológica de calidad,
+                        pertinente y equitativa, contribuyendo a la formación
+                        de una sociedad justa y humana, con una perspectiva
+                        de sustentabilidad y seguridad.
+                    </p>
+
+                </div>
+
+
+                <!-- VISIÓN -->
+
+                <div class="tarjeta">
+
+                    <h3>
+                        Visión
+                    </h3>
+
+                    <p>
+                        Ser una institución que contribuya como uno de los
+                        pilares del desarrollo sostenido, sustentable y
+                        equitativo de la nación.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- VALORES -->
+
+            <div class="valores">
+
+                <h2 class="titulo">
+                    Nuestros Valores
+                </h2>
+
+
+                <div class="lista-valores">
+
+
+                    <div class="valor">
+
+                        <h4>
+                            Respeto
+                        </h4>
+
+                        <p>
+                            Promover la tolerancia, aceptación y convivencia
+                            armoniosa entre las personas.
+                        </p>
+
+                    </div>
+
+
+                    <div class="valor">
+
+                        <h4>
+                            Fraternidad
+                        </h4>
+
+                        <p>
+                            Fomentar la solidaridad y colaboración para
+                            alcanzar objetivos comunes.
+                        </p>
+
+                    </div>
+
+
+                    <div class="valor">
+
+                        <h4>
+                            Disciplina
+                        </h4>
+
+                        <p>
+                            Cumplir las normas necesarias para mantener
+                            el orden y alcanzar las metas institucionales.
+                        </p>
+
+                    </div>
+
+
+                    <div class="valor">
+
+                        <h4>
+                            Calidad Académica
+                        </h4>
+
+                        <p>
+                            Buscar la mejora continua de los servicios
+                            educativos y el desarrollo de las capacidades.
+                        </p>
+
+                    </div>
+
+
+                    <div class="valor">
+
+                        <h4>
+                            Espíritu de Servicio
+                        </h4>
+
+                        <p>
+                            Mantener una disposición positiva para brindar
+                            apoyo y realizar acciones útiles para los demás.
+                        </p>
+
+                    </div>
+
+
+                    <div class="valor">
+
+                        <h4>
+                            Excelencia
+                        </h4>
+
+                        <p>
+                            Impulsar el crecimiento académico y personal
+                            mediante la mejora continua.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DIRECTORIO -->
+
+        <section class="directorio">
+
+            <h2 class="titulo">
+                Directorio
+            </h2>
+
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Cargo
+                            </th>
+
+                            <th>
+                                Nombre
+                            </th>
+
+                            <th>
+                                Extensión
+                            </th>
+
+                            <th>
+                                Correo
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <tr>
+
+                            <td>
+                                Directora General
+                            </td>
+
+                            <td>
+                                Ing. Yahaira Tanairi Jiménez Reyes
+                            </td>
+
+                            <td>
+                                1000
+                            </td>
+
+                            <td>
+                                itszndirecciongeneral@gmail.com
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Director Académico
+                            </td>
+
+                            <td>
+                                ISC Jairo Isaac Lira Leyva
+                            </td>
+
+                            <td>
+                                1005
+                            </td>
+
+                            <td>
+                                dir.acad@itszn.edu.mx
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Director de Planeación y Vinculación
+                            </td>
+
+                            <td>
+                                Lic. Pedro Muro Zúñiga
+                            </td>
+
+                            <td>
+                                1013
+                            </td>
+
+                            <td>
+                                vinculacion@itszn.edu.mx
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Subdirectora de Servicios Administrativos
+                            </td>
+
+                            <td>
+                                C.P. Jaqueline Delfín Sánchez
+                            </td>
+
+                            <td>
+                                1006
+                            </td>
+
+                            <td>
+                                No disponible
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Jefa de Servicios Escolares
+                            </td>
+
+                            <td>
+                                C.P. Elvia Alvarado Díaz
+                            </td>
+
+                            <td>
+                                1010
+                            </td>
+
+                            <td>
+                                serv_escolar@itszn.edu.mx
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Jefe de División de Ingeniería en Sistemas
+                            </td>
+
+                            <td>
+                                LI Manuel Ignacio Salas Guzmán
+                            </td>
+
+                            <td>
+                                1011
+                            </td>
+
+                            <td>
+                                div_iisc@itszn.edu.mx
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Jefa de División de Ing. en Administración
+                                e Ing. Gestión Empresarial
+                            </td>
+
+                            <td>
+                                Lic. Gloria Elena Manríquez Muñoz
+                            </td>
+
+                            <td>
+                                1003
+                            </td>
+
+                            <td>
+                                div_ia@itszn.edu.mx
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Jefa de División de Contador Público
+                            </td>
+
+                            <td>
+                                L.C. Cynthia Marisol Mendoza Alvarado
+                            </td>
+
+                            <td>
+                                1004
+                            </td>
+
+                            <td>
+                                div_cp@itszn.edu.mx
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Jefe de División de Industrias Alimentarias
+                            </td>
+
+                            <td>
+                                Ing. José Mancillas Medina
+                            </td>
+
+                            <td>
+                                1021
+                            </td>
+
+                            <td>
+                                div_iia@itszn.edu.mx
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOTÓN -->
+
+        <div class="regresar">
+
+            <a href="index.html" class="boton">
+                ← Regresar al inicio
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================= -->
+
+    <footer>
+
+        <p>
+            <strong>
+                TecNM | Campus Zacatecas Norte
+            </strong>
+        </p>
+
+        <p>
+            Sitio web informativo
+        </p>
+
+        <p>
+            © 2026 TecNM Campus Zacatecas Norte
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
