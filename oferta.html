@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Oferta Educativa | TecNM Zacatecas Norte</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        /* =========================
+           ENCABEZADO
+        ========================= */
+
+        header {
+            background-color: #003b5c;
+            color: white;
+
+            padding: 20px 60px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 30px;
+        }
+
+        .logo p {
+            margin-top: 5px;
+            font-size: 15px;
+        }
+
+        /* =========================
+           MENÚ
+        ========================= */
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+
+            gap: 10px;
+        }
+
+        nav ul li a {
+            color: white;
+
+            text-decoration: none;
+
+            padding: 12px 18px;
+
+            display: block;
+
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #005b85;
+        }
+
+        /* =========================
+           PORTADA
+        ========================= */
+
+        .portada {
+
+            background: linear-gradient(
+                rgba(0, 59, 92, 0.90),
+                rgba(0, 59, 92, 0.90)
+            );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 80px 20px;
+        }
+
+        .portada h2 {
+            font-size: 45px;
+
+            margin-bottom: 15px;
+        }
+
+        .portada p {
+            font-size: 20px;
+        }
+
+        /* =========================
+           CONTENEDOR
+        ========================= */
+
+        .contenedor {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            padding: 60px 20px;
+        }
+
+        .titulo {
+
+            text-align: center;
+
+            color: #003b5c;
+
+            font-size: 32px;
+
+            margin-bottom: 15px;
+        }
+
+        .descripcion {
+
+            text-align: center;
+
+            max-width: 850px;
+
+            margin: 0 auto 45px;
+
+            line-height: 1.7;
+
+            color: #555;
+        }
+
+        /* =========================
+           CARRERAS
+        ========================= */
+
+        .carreras {
+
+            display: grid;
+
+            grid-template-columns:
+            repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .carrera {
+
+            background-color: white;
+
+            border-radius: 12px;
+
+            padding: 30px 25px;
+
+            box-shadow:
+            0 4px 12px rgba(0,0,0,0.12);
+
+            border-top: 6px solid #003b5c;
+
+            transition: 0.3s;
+        }
+
+        .carrera:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow:
+            0 8px 18px rgba(0,0,0,0.18);
+        }
+
+        .icono {
+
+            width: 65px;
+
+            height: 65px;
+
+            background-color: #003b5c;
+
+            color: white;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-size: 28px;
+
+            margin: 0 auto 20px;
+        }
+
+        .carrera h3 {
+
+            color: #003b5c;
+
+            text-align: center;
+
+            font-size: 21px;
+
+            margin-bottom: 15px;
+        }
+
+        .carrera p {
+
+            line-height: 1.6;
+
+            text-align: justify;
+
+            color: #555;
+        }
+
+        /* =========================
+           MODALIDADES
+        ========================= */
+
+        .modalidades {
+
+            margin-top: 80px;
+        }
+
+        .modalidades-contenedor {
+
+            display: grid;
+
+            grid-template-columns:
+            repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .modalidad {
+
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow:
+            0 4px 12px rgba(0,0,0,0.10);
+
+            text-align: center;
+
+            border-bottom: 5px solid #f5b400;
+        }
+
+        .modalidad h3 {
+
+            color: #003b5c;
+
+            margin-bottom: 15px;
+
+            font-size: 23px;
+        }
+
+        .modalidad p {
+
+            line-height: 1.6;
+
+            color: #555;
+        }
+
+        /* =========================
+           INFORMACIÓN
+        ========================= */
+
+        .informacion {
+
+            margin-top: 60px;
+
+            background-color: #003b5c;
+
+            color: white;
+
+            padding: 40px;
+
+            border-radius: 12px;
+
+            text-align: center;
+        }
+
+        .informacion h2 {
+
+            color: #f5b400;
+
+            margin-bottom: 15px;
+        }
+
+        .informacion p {
+
+            line-height: 1.7;
+        }
+
+        .boton {
+
+            display: inline-block;
+
+            margin-top: 25px;
+
+            background-color: #f5b400;
+
+            color: #003b5c;
+
+            text-decoration: none;
+
+            padding: 13px 25px;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+        }
+
+        .boton:hover {
+
+            background-color: #ffd15c;
+        }
+
+        /* =========================
+           REGRESAR
+        ========================= */
+
+        .regresar {
+
+            text-align: center;
+
+            margin: 40px 0;
+        }
+
+        .boton-regresar {
+
+            display: inline-block;
+
+            background-color: #003b5c;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 13px 25px;
+
+            border-radius: 5px;
+        }
+
+        .boton-regresar:hover {
+
+            background-color: #005b85;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            background-color: #003b5c;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        footer p {
+
+            margin: 5px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 20px;
+
+                text-align: center;
+            }
+
+            nav ul {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .carreras {
+
+                grid-template-columns: 1fr;
+            }
+
+            .modalidades-contenedor {
+
+                grid-template-columns: 1fr;
+            }
+
+            .portada h2 {
+
+                font-size: 34px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <h1>TecNM</h1>
+
+            <p>
+                Campus Zacatecas Norte
+            </p>
+
+        </div>
+
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="conocenos.html">
+                        Conócenos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="oferta.html">
+                        Oferta Educativa
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Servicios
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         PORTADA
+    ========================= -->
+
+    <section class="portada">
+
+        <h2>
+            Oferta Educativa
+        </h2>
+
+        <p>
+            TecNM | Campus Zacatecas Norte
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         CONTENIDO
+    ========================= -->
+
+    <main class="contenedor">
+
+
+        <!-- =========================
+             INTRODUCCIÓN
+        ========================= -->
+
+        <section>
+
+            <h2 class="titulo">
+                Nuestra Oferta Educativa
+            </h2>
+
+            <p class="descripcion">
+
+                En el Tecnológico Nacional de México Campus Zacatecas
+                Norte se ofrece una formación profesional orientada a
+                las necesidades de desarrollo social y económico de la
+                región y del país.
+
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             CARRERAS
+        ========================= -->
+
+        <section>
+
+            <h2 class="titulo">
+                Carreras
+            </h2>
+
+            <p class="descripcion">
+
+                Conoce los programas educativos disponibles en el
+                TecNM Campus Zacatecas Norte.
+
+            </p>
+
+
+            <div class="carreras">
+
+
+                <!-- CONTADOR PÚBLICO -->
+
+                <div class="carrera">
+
+                    <div class="icono">
+                        $
+                    </div>
+
+                    <h3>
+                        Contador Público
+                    </h3>
+
+                    <p>
+
+                        Formación profesional orientada al análisis,
+                        interpretación y generación de información
+                        financiera y fiscal para apoyar la toma de
+                        decisiones en las organizaciones.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ADMINISTRACIÓN -->
+
+                <div class="carrera">
+
+                    <div class="icono">
+                        A
+                    </div>
+
+                    <h3>
+                        Ingeniería en Administración
+                    </h3>
+
+                    <p>
+
+                        Prepara profesionales capaces de desarrollar,
+                        innovar y administrar organizaciones, así como
+                        tomar decisiones y optimizar recursos.
+
+                    </p>
+
+                </div>
+
+
+                <!-- GESTIÓN EMPRESARIAL -->
+
+                <div class="carrera">
+
+                    <div class="icono">
+                        G
+                    </div>
+
+                    <h3>
+                        Ingeniería en Gestión Empresarial
+                    </h3>
+
+                    <p>
+
+                        Integra conocimientos de gestión e innovación
+                        de procesos, sistemas estratégicos de negocios
+                        y optimización de recursos.
+
+                    </p>
+
+                </div>
+
+
+                <!-- SISTEMAS COMPUTACIONALES -->
+
+                <div class="carrera">
+
+                    <div class="icono">
+                        &lt;/&gt;
+                    </div>
+
+                    <h3>
+                        Ingeniería en Sistemas Computacionales
+                    </h3>
+
+                    <p>
+
+                        Forma profesionales capaces de diseñar,
+                        implementar y administrar sistemas e
+                        infraestructuras computacionales y desarrollar
+                        soluciones tecnológicas.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ELECTROMECÁNICA -->
+
+                <div class="carrera">
+
+                    <div class="icono">
+                        ⚙
+                    </div>
+
+                    <h3>
+                        Ingeniería en Electromecánica
+                    </h3>
+
+                    <p>
+
+                        Prepara profesionales para trabajar con sistemas
+                        mecánicos, eléctricos, térmicos, hidráulicos y
+                        electrónicos, así como en proyectos y procesos
+                        electromecánicos.
+
+                    </p>
+
+                </div>
+
+
+                <!-- INDUSTRIAS ALIMENTARIAS -->
+
+                <div class="carrera">
+
+                    <div class="icono">
+                        +
+                    </div>
+
+                    <h3>
+                        Ingeniería en Industrias Alimentarias
+                    </h3>
+
+                    <p>
+
+                        Forma profesionales capaces de desarrollar,
+                        mejorar y producir alimentos inocuos e
+                        innovadores mediante conocimientos científicos
+                        y tecnológicos.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MODALIDADES
+        ========================= -->
+
+        <section class="modalidades">
+
+            <h2 class="titulo">
+                Modalidades
+            </h2>
+
+            <p class="descripcion">
+
+                Consulta las opciones de modalidad educativa disponibles
+                para los estudiantes del TecNM Campus Zacatecas Norte.
+
+            </p>
+
+
+            <div class="modalidades-contenedor">
+
+
+                <!-- ESCOLARIZADO -->
+
+                <div class="modalidad">
+
+                    <h3>
+                        Escolarizado
+                    </h3>
+
+                    <p>
+
+                        Modalidad en la que el estudiante desarrolla
+                        sus actividades académicas principalmente
+                        dentro de las instalaciones del instituto.
+
+                    </p>
+
+                </div>
+
+
+                <!-- SEMIESCOLARIZADO -->
+
+                <div class="modalidad">
+
+                    <h3>
+                        Semiescolarizado
+                    </h3>
+
+                    <p>
+
+                        Modalidad que combina actividades presenciales
+                        con otras formas de trabajo académico,
+                        permitiendo mayor flexibilidad.
+
+                    </p>
+
+                </div>
+
+
+                <!-- OTRAS MODALIDADES -->
+
+                <div class="modalidad">
+
+                    <h3>
+                        Opciones Educativas
+                    </h3>
+
+                    <p>
+
+                        Consulta directamente las convocatorias y
+                        procesos de admisión vigentes para conocer
+                        las modalidades disponibles en cada programa.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INFORMACIÓN DE ADMISIÓN
+        ========================= -->
+
+        <section class="informacion">
+
+            <h2>
+                ¿Quieres formar parte del TecNM?
+            </h2>
+
+            <p>
+
+                Consulta la información oficial de admisión,
+                requisitos, fechas y proceso de ingreso.
+
+            </p>
+
+            <a
+                href="https://admision.itszn.edu.mx/"
+                target="_blank"
+                class="boton">
+
+                Información de Admisión
+
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             REGRESAR
+        ========================= -->
+
+        <div class="regresar">
+
+            <a
+                href="index.html"
+                class="boton-regresar">
+
+                ← Regresar al inicio
+
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================= -->
+
+    <footer>
+
+        <p>
+            <strong>
+                TecNM | Campus Zacatecas Norte
+            </strong>
+        </p>
+
+        <p>
+            Oferta Educativa
+        </p>
+
+        <p>
+            ©️ 2026 TecNM Campus Zacatecas Norte
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
