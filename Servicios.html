@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,10 @@
             color: #333;
         }
 
-        /* ENCABEZADO */
+        /* =========================
+           ENCABEZADO
+        ========================== */
+
         header {
             background-color: #003b5c;
             color: white;
@@ -39,7 +43,10 @@
             font-size: 14px;
         }
 
-        /* MENÚ */
+        /* =========================
+           MENÚ
+        ========================== */
+
         nav ul {
             list-style: none;
             display: flex;
@@ -58,12 +65,16 @@
             background-color: #005b85;
         }
 
-        /* PORTADA */
+        /* =========================
+           PORTADA
+        ========================== */
+
         .hero {
             background: linear-gradient(
                 rgba(0, 59, 92, 0.9),
                 rgba(0, 91, 133, 0.9)
             );
+
             color: white;
             text-align: center;
             padding: 70px 20px;
@@ -80,7 +91,10 @@
             margin: auto;
         }
 
-        /* CONTENEDOR */
+        /* =========================
+           CONTENEDOR
+        ========================== */
+
         .contenedor {
             width: 90%;
             max-width: 1200px;
@@ -103,7 +117,10 @@
             line-height: 1.7;
         }
 
-        /* TARJETAS */
+        /* =========================
+           TARJETAS
+        ========================== */
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -154,7 +171,10 @@
             background-color: #005b85;
         }
 
-        /* SECCIÓN ESPECIAL */
+        /* =========================
+           SECCIÓN ESPECIAL
+        ========================== */
+
         .seccion-especial {
             background-color: #eaf3f8;
             padding: 35px;
@@ -173,7 +193,10 @@
             text-align: center;
         }
 
-        /* PIE DE PÁGINA */
+        /* =========================
+           PIE DE PÁGINA
+        ========================== */
+
         footer {
             background-color: #003b5c;
             color: white;
@@ -190,7 +213,10 @@
             margin: 5px 0;
         }
 
-        /* RESPONSIVO */
+        /* =========================
+           RESPONSIVO
+        ========================== */
+
         @media (max-width: 768px) {
 
             header {
@@ -209,14 +235,17 @@
                 font-size: 32px;
             }
         }
+
     </style>
 </head>
+
 
 <body>
 
     <!-- =========================
          ENCABEZADO
     ========================== -->
+
     <header>
 
         <div class="logo">
@@ -226,6 +255,7 @@
 
         <nav>
             <ul>
+
                 <li>
                     <a href="principal.html">Inicio</a>
                 </li>
@@ -241,6 +271,7 @@
                 <li>
                     <a href="servicios.html">Servicios</a>
                 </li>
+
             </ul>
         </nav>
 
@@ -250,6 +281,7 @@
     <!-- =========================
          PORTADA
     ========================== -->
+
     <section class="hero">
 
         <h2>Servicios</h2>
@@ -265,7 +297,9 @@
     <!-- =========================
          CONTENIDO
     ========================== -->
+
     <main class="contenedor">
+
 
         <section class="introduccion">
 
@@ -284,9 +318,12 @@
         <!-- =========================
              SERVICIOS PRINCIPALES
         ========================== -->
+
         <section class="grid">
 
+
             <!-- CURSOS DE VERANO -->
+
             <div class="card">
 
                 <h3>☀️ Cursos de Verano</h3>
@@ -301,6 +338,7 @@
 
 
             <!-- CREDENCIAL -->
+
             <div class="card">
 
                 <h3>🪪 Reposición de Credencial</h3>
@@ -315,6 +353,7 @@
 
 
             <!-- IMPRESIÓN -->
+
             <div class="card">
 
                 <h3>🖨️ Servicio de Impresión</h3>
@@ -329,6 +368,7 @@
 
 
             <!-- FOTOCOPIADO -->
+
             <div class="card">
 
                 <h3>📄 Servicio de Fotocopiado</h3>
@@ -342,6 +382,7 @@
 
 
             <!-- IDIOMA INGLÉS -->
+
             <div class="card">
 
                 <h3>🌎 Servicios de Idioma Inglés</h3>
@@ -364,6 +405,7 @@
 
 
             <!-- TRADUCCIONES -->
+
             <div class="card">
 
                 <h3>🌐 Servicios de Traducción</h3>
@@ -384,12 +426,98 @@
 
             </div>
 
+
+            <!-- =========================
+                 SCE
+            ========================== -->
+
+            <div class="card">
+
+                <h3>🏫 SCE - Servicios de Control Escolar</h3>
+
+                <p>
+                    Servicios de Control Escolar permite a los
+                    estudiantes realizar y consultar diferentes
+                    procesos relacionados con su información
+                    académica dentro de la institución.
+                </p>
+
+                <ul>
+                    <li>Consulta de información académica</li>
+                    <li>Seguimiento escolar</li>
+                    <li>Trámites escolares</li>
+                    <li>Consulta de calificaciones</li>
+                </ul>
+
+                <a href="#" class="boton">
+                    Ir a SCE
+                </a>
+
+            </div>
+
+
+            <!-- =========================
+                 MOODLE
+            ========================== -->
+
+            <div class="card">
+
+                <h3>💻 Moodle</h3>
+
+                <p>
+                    Plataforma educativa utilizada por profesores
+                    y estudiantes para apoyar las actividades
+                    académicas de las diferentes materias.
+                </p>
+
+                <ul>
+                    <li>Entrega de trabajos y tareas</li>
+                    <li>Realización de exámenes</li>
+                    <li>Consulta de actividades</li>
+                    <li>Material proporcionado por los profesores</li>
+                </ul>
+
+                <a href="#" class="boton">
+                    Ir a Moodle
+                </a>
+
+            </div>
+
+
+            <!-- =========================
+                 BOLSA DE TRABAJO
+            ========================== -->
+
+            <div class="card">
+
+                <h3>💼 Bolsa de Trabajo</h3>
+
+                <p>
+                    Espacio destinado a acercar a estudiantes y
+                    egresados con diferentes oportunidades laborales
+                    relacionadas con su formación profesional.
+                </p>
+
+                <ul>
+                    <li>Consulta de vacantes</li>
+                    <li>Oportunidades de empleo</li>
+                    <li>Información para estudiantes y egresados</li>
+                    <li>Vinculación con empresas</li>
+                </ul>
+
+                <a href="#" class="boton">
+                    Ver Bolsa de Trabajo
+                </a>
+
+            </div>
+
         </section>
 
 
         <!-- =========================
              TRÁMITES
         ========================== -->
+
         <section class="seccion-especial">
 
             <h2>Trámites disponibles</h2>
@@ -404,9 +532,14 @@
 
             <br>
 
+
             <div class="grid">
 
+
+                <!-- ADMISIÓN -->
+
                 <div class="card">
+
                     <h3>🎓 Admisión</h3>
 
                     <p>
@@ -420,36 +553,49 @@
                         class="boton">
                         Ver información
                     </a>
+
                 </div>
 
 
+                <!-- INSCRIPCIONES -->
+
                 <div class="card">
+
                     <h3>📚 Inscripciones</h3>
 
                     <p>
                         Procesos relacionados con la inscripción
                         semestral en los diferentes sistemas.
                     </p>
+
                 </div>
 
 
+                <!-- CONSTANCIAS -->
+
                 <div class="card">
+
                     <h3>📑 Constancias y certificados</h3>
 
                     <p>
                         Solicitud de constancias de inscripción
                         y estudios, así como certificados parciales.
                     </p>
+
                 </div>
 
 
+                <!-- TITULACIÓN -->
+
                 <div class="card">
+
                     <h3>🎓 Titulación</h3>
 
                     <p>
                         Información sobre examen de titulación,
                         protocolo y trámite de título profesional.
                     </p>
+
                 </div>
 
             </div>
@@ -462,6 +608,7 @@
     <!-- =========================
          PIE DE PÁGINA
     ========================== -->
+
     <footer>
 
         <h3>TecNM | Campus Zacatecas Norte</h3>
@@ -474,5 +621,7 @@
 
     </footer>
 
+
 </body>
+
 </html>
